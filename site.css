@@ -1213,10 +1213,18 @@ footer {
 /* Team portrait gallery (dark who-we-are section) */
 .team-gallery {
   display: grid;
-  grid-template-columns: minmax(0, 480px);
-  gap: 16px;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
   margin-top: 64px;
   align-items: start;
+}
+.team-gallery .team-portrait { grid-column: 2; }
+@media (max-width: 1080px) {
+  .team-gallery { grid-template-columns: 1fr; gap: 0; }
+  .team-gallery .team-portrait { grid-column: 1; max-width: 480px; }
+}
+@media (max-width: 720px) {
+  .team-gallery .team-portrait { max-width: 100%; }
 }
 .team-portrait {
   position: relative;
