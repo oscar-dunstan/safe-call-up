@@ -48,7 +48,7 @@
       </ul>
       <div class="mobile-nav__foot">
         <a class="mobile-nav__cta" href="#contact">Contact</a>
-        <a class="mobile-nav__exit-link" href="https://www.bom.gov.au/">Quick exit</a>
+        <a class="mobile-nav__exit-link" href="https://www.google.com/">Quick exit</a>
       </div>
     </nav>
   </div>
@@ -549,7 +549,7 @@
   <!-- floating quick exit -->
   <div class="quick-exit" role="region" aria-label="Quick exit">
     <span class="meta">Esc twice</span>
-    <a class="btn" id="quickExitBtn" href="https://www.bom.gov.au/" rel="noopener">
+    <a class="btn" id="quickExitBtn" href="https://www.google.com/" rel="noopener">
       Quick exit
       <span class="esc">ESC</span>
     </a>
@@ -560,11 +560,10 @@
 <script>
 // Quick Exit
 (function () {
-  var SAFE_URL = 'https://www.bom.gov.au/';
+  var SAFE_URL = 'https://www.google.com/';
   var lastEsc = 0;
   function exit() {
     try { window.location.replace(SAFE_URL); } catch (e) {}
-    try { window.open('about:blank', '_self'); } catch (e) {}
   }
   var exitBtn = document.getElementById('quickExitBtn');
   if (exitBtn) exitBtn.addEventListener('click', function(e) { e.preventDefault(); exit(); });
@@ -584,7 +583,7 @@
   if (!burger || !overlay) return;
   var overlayExit = overlay.querySelector('.mobile-nav__exit-link');
   if (overlayExit) overlayExit.addEventListener('click', function (e) {
-    e.preventDefault(); try { window.location.replace('https://www.bom.gov.au/'); } catch(x){}
+    e.preventDefault(); try { window.location.replace('https://www.google.com/'); } catch(x){}
   });
   var isOpen = false;
   function openNav() {

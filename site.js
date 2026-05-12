@@ -36,7 +36,7 @@
   if (overlayExit) {
     overlayExit.addEventListener('click', function (e) {
       e.preventDefault();
-      try { window.location.replace('https://www.bom.gov.au/'); } catch (x) {}
+      try { window.location.replace('https://www.google.com/'); } catch (x) {}
     });
   }
 
